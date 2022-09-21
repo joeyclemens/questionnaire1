@@ -1266,7 +1266,7 @@
             </div>
 
             <div class="banner3">
-                <h1>Demographic Information</h1>
+                <h1>Patient Information</h1>
             </div>
 
             <div class="info2">
@@ -1281,7 +1281,7 @@
 
                 <br><br>
 
-                <label for="gender">Gender</label>
+                <label for="gender">What is your gender</label>
                 <select id="gender" name="gender" required>
                   <option value="">Please select</option>
                   <option value="male">Male</option>
@@ -1306,47 +1306,6 @@
 
                 <br><br>
 
-                <label for="income">What is your total annual household income?</label>
-                <select id="income" name="income" required>
-                  <option value="">Please select</option>
-                  <option value="Less than $24,999">Less than $24,999</option>
-                  <option value="$25,000-49,999">$25,000-49,999</option>
-                  <option value="$50,000-74,999">$50,000-74,999</option>
-                  <option value="$75,000-99,999">$75,000-99,999</option>
-                  <option value="$100,000 and greater">$100,000 and greater</option>
-                </select>
-
-                <br><br>
-
-                <label for="employment status">What is your employment status?</label>
-                <select id="employment status" name="employment status" required>
-                  <option value="">Please select</option>
-                  <option value="Full time">Full time</option>
-                  <option value="Part time">Part time</option>
-                  <option value="Other">Other</option>
-                </select>
-
-                <br><br>
-
-                <label for="current-position">Describe your current position <br>
-                    <textarea id="current-position" type="textarea" name="current-position" required placeholder="Describe your current position"></textarea>
-                    </label>
-
-                <br><br>
-
-                <label for="length-of-employment">How long have you been working with your current employer?</label>
-                <select id="length-of-employment" name="length-of-employment" required>
-                  <option value="">Please select</option>
-                  <option value="Less than 3 months">Less than 3 months</option>
-                  <option value="3-5 months">3-5 months</option>
-                  <option value="6-11 months">6-11 months</option>
-                  <option value="1-4 years">1-4 years</option>
-                  <option value="5 or more years">5 or more years</option>
-                </select>
-
-                <br><br>
-
-                
                 <label for="education-level">What is your education level?</label>
                 <select id="education-level" name="education-level" required>
                   <option value="">Please select</option>
@@ -1359,7 +1318,7 @@
                 </select>
 
                 <br><br>
-                
+
                 <label for="Where do you live?">Where do you live?</label>
                 <select id="Where do you live?" name="Where do you live?" required>
                   <option value="">Please select</option>
@@ -1370,17 +1329,49 @@
 
                 <br><br>
 
-                <label for="How long have you worked in the current position?">How long have you worked in the current position?</label>
-                <select id="How long have you worked in the current position?" name="How long have you worked in the current position?" required>
+                <label for="income">What is your total annual household income?</label>
+                <select id="income" name="income" required>
                   <option value="">Please select</option>
-                  <option value="Less than 3 months">Less than 3 months</option>
-                  <option value="3-5 months">3-5 months</option>
-                  <option value="6-11 months">6-11 months</option>
-                  <option value="1-4 years">1-4 years</option>
-                  <option value="5 or more years">5 or more years</option>
+                  <option value="Less than $24,999">Less than $24,999</option>
+                  <option value="$25,000-49,999">$25,000-49,999</option>
+                  <option value="$50,000-74,999">$50,000-74,999</option>
+                  <option value="$75,000-99,999">$75,000-99,999</option>
+                  <option value="$100,000 and greater">$100,000 and greater</option>
                 </select>
 
                 <br><br>
+
+                <label for="How_did_you_get_to_clinic">How did you get to the clinic?</label>
+                <select id="How_did_you_get_to_clinic" name="How_did_you_get_to_clinic" required>
+                  <option value="">Please select</option>
+                  <option value="By car">By car</option>
+                  <option value="Walk">Walk</option>
+                  <option value="Public">By bus or other public transportation</option>
+                </select>
+
+                <br><br>
+
+                <label for="wait_in_waiting_room">How long did you wait in waiting room or space?
+                    <input type="number" id="wait_in_waiting_room" name="wait_in_waiting_room" min="1" max="1000" required>
+                </label>
+
+                <br><br>
+
+                <label for="wait_in_exam_room">How long did you wait in exam room?
+                    <input type="number" id="wait_in_exam_room" name="wait_in_exam_room" min="1" max="1000" required>
+                </label>
+
+                <br><br>
+
+                <label for="wait_at_checkout">How long did you wait at checkout?
+                    <input type="number" id="wait_at_checkout" name="wait_at_checkout" min="1" max="1000" required>
+                </label>
+
+                <br><br>
+
+                
+
+               
 
                 <h2>Thankyou</h2>
 
