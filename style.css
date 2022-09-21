@@ -1,0 +1,353 @@
+body {
+  width: 100%;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+.header img {
+  position: fixed;
+  max-width: 80%;  x
+height: auto;   
+left: 40px;
+top: 10px;
+}
+
+.bigline {
+  height: 5px;
+  width: 100%;
+  background-color: teal;
+
+}
+
+@media screen and (max-width: 600px){
+
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    padding-top: 5px;
+    width: 100%;
+  }
+
+  .header h1 {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .header img {
+  position: fixed;
+  max-width: 30%;  
+  height: auto;   
+  left: 5px;
+ 
+}
+}
+
+/* styles the scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#2290da, #7daac9);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* progress bar in header */ 
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #fff;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #2290da;
+  width: 0%;
+}
+
+
+
+
+
+.intro {
+  position: relative;
+  left: 15px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+}
+
+.banner1 {
+  position: relative;
+  background-color: aqua;
+  width: 100%;
+
+}
+
+.banner1 h1 {
+  position: relative;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: grey;
+  width: 90%;
+}
+
+
+
+.banner2 {
+  position: relative;
+  background-color: #fcbb88;
+  width: 100%;
+
+}
+
+.banner2 h1 {
+  position: relative;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner3 {
+  position: relative;
+  background-color: #0096FF;
+  width: 100%;
+
+}
+
+.banner3 h1 {
+  position: relative;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* css for the hidden text box */
+.d-none {
+  display: none;
+}
+
+/* styles the input boxes */
+select {
+  border-style: solid;
+  border-color: #2290da;
+  border-radius: 5px;
+}
+
+input {
+  border-style: solid;
+  border-color: #2290da;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 80%;
+  height: 300px;
+  border-style: solid;
+  border-color: #2290da;
+  border-radius: 5px;
+}
+
+.info1 {
+  position: relative;
+  left: 20px;
+}
+
+.info2 {
+  position: relative;
+  left: 20px;
+}
+
+.form3 {
+  position: relative;
+  left: 20px;
+}
+
+/*radio button style*/
+:root {
+  --form-control-color: #0096FF;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  /* ...existing styles */
+
+  display: inline-grid;
+  place-content: center;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+}
+
+.form-control + .form-control {
+  margin-top: 3em;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+
+/*Button madness*/
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
