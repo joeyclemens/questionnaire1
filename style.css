@@ -19,7 +19,7 @@ body {
 }
 
 .header img {
-  position: fixed;
+  position: relative;
   max-width: 80%;  x
 height: auto;   
 left: 40px;
