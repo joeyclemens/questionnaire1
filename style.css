@@ -192,12 +192,40 @@ textarea {
   left: 20px;
 }
 
+.form1 {
+  position: relative;
+  left: 20px;
+}
+
+.form1 textarea {
+  width: 50%;
+  height: 100px;
+  border-style: solid;
+  border-color: #2290da;
+  border-radius: 5px;
+
+}
+
+.form2 {
+  position: relative;
+  left: 20px;
+}
+
 .form3 {
   position: relative;
   left: 20px;
 }
 
-/*radio button style*/
+.form3 textarea {
+  width: 50%;
+  height: 100px;
+  border-style: solid;
+  border-color: #2290da;
+  border-radius: 5px;
+
+}
+
+/*===================radio button style=========================*/
 :root {
   --form-control-color: #0096FF;
 }
