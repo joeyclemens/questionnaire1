@@ -235,6 +235,13 @@ textarea {
 
 }
 
+.minute input {
+  width: 80px;
+  border-style: solid;
+  border-color: #2290da;
+  border-radius: 5px;
+
+}
 /*===================radio button style=========================*/
 :root {
   --form-control-color: #0096FF;
