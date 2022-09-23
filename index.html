@@ -74,7 +74,7 @@
                     <input type="number" id="number_of_visits" name="number_of_visits" min="1" max="1000" required>
                 </label>
 
-               
+                <br><br>
 
                 <!--This next section is the incredibly long and complicated bit for the 
                 multiple selection of departments... -->
@@ -204,34 +204,31 @@
                            </div>
                          </label>
                        </li>
+                       <li>
+                        <label>
+                          <div class="checkbox-container">
+                            <input type="checkbox" name="styles" id="opt-e" value="Other"/>
+                            <div class="checkmark">
+                              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                              </svg>
+                            </div>
+                            <span class="option-label">Other, please specify</span>
+                          </div>
+                          <label for name="Department1" id="Department1" class="d-none">
+                            <input type="text" id="Department" name="Department" size="30" placeholder="Enter department here"></label>
+                        </label>
+                
+                        
+                        </li>
                        
                       </ul>
                     </div> 
                   </div>
-                  <div>Currently selected: <p class="current-selection"></p></div>
+                  <div>Currently selected: <p class="current-selection"></p> </div>
 
-                  <br><br>
-
-
-                <label for="which_department_have_you_visited">Which departments have you visited?</label>
-                <select id="which_department_have_you_visited" onchange="enable5(this)" name="which_department_have_you_visited">
-                  <option value="">Please select</option>
-                  <option value="Inpatient_ward">Inpatient ward</option>
-                  <option value="Intensive_care">Intensive care</option>
-                  <option value="Outpatient_clinics">Outpatient clinics</option>
-                  <option value="Operating_Theatres">Operating Theatre</option>
-                  <option value="Day_ward">Day ward</option>
-                  <option value="Diagnostic_imaging">Diagnostic imaging</option>
-                  <option value="Endoscopy">Endoscopy</option>
-                  <option value="Neurological_Rehabiliation">Neurological Rehabiliation</option>
-                  <option value="5">Other, please specify</option>
-                </select>
-
-                <label for name="Department1" id="Department1" class="d-none">
-                    <input type="text" id="Department" name="Department" size="30"></label>
-
-                <br><br>
-
+               
                 <br><br>
                  <div class="minute">
                 <label for="how_long_did_you_wait">How long did you wait in a waiting room or space?
@@ -240,7 +237,7 @@
             </div>
             
                 
-                <br><br>
+               
                
                 </div>
 
@@ -746,6 +743,7 @@
             //Send Custom Event "stylesChange"
             currentSelection.dispatchEvent(new CustomEvent("stylesChange"));
         }
+
         
       panel.addEventListener("click", () => {
             toggleDropdown();
