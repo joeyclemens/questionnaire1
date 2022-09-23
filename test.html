@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+<style>
+  
+
+</style>
+
+<h4>From</h4>
+
+<div>
+    <select name="sites-list" size="7" multiple>
+        <option value="site-1">SITE</option>
+        <option value="site-2" selected>SITE</option>
+        <option value="site-3">SITE</option>
+        <option value="site-4">SITE</option>
+        <option value="site-5">SITE</option>
+        <option value="site-6" selected>SITE</option>
+        <option value="site-7">SITE</option>
+        <option value="site-8">SITE</option>
+        <option value="site-9">SITE</option>
+    </select>
+</div>
+    
+    
+
+      <script>
+      window.onmousedown = function (e) {
+    var el = e.target;
+    if (el.tagName.toLowerCase() == 'option' && el.parentNode.hasAttribute('multiple')) {
+        e.preventDefault();
+
+        // toggle selection
+        if (el.hasAttribute('selected')) el.removeAttribute('selected');
+        else el.setAttribute('selected', '');
+
+        // hack to correct buggy behavior
+        var select = el.parentNode.cloneNode(true);
+        el.parentNode.parentNode.replaceChild(select, el.parentNode);
+    }
+}
+      </script>
+
+</body>
+</html>
