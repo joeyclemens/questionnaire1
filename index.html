@@ -13,7 +13,7 @@
 
        <div class="header">
         <img src="/images/image001.png" alt="mjm logo">
-            <h1>Post Occupation Evaluation of Cleveland <br> Patient Survey </h1>
+            <h1>Post Occupation Evaluation of <br> Cleveland Clinic London. <br> <u>Patient Survey</u> </h1>
             <p>
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
@@ -76,9 +76,21 @@
 
                 <br><br>
 
-                <label for="which_department_have_you_visited">Which departments have you visited? <br>
-                    <textarea id="which_department_have_you_visited" type="textarea" name="which_department_have_you_visited" required placeholder="Please type your answer here"></textarea>
-                    </label>
+
+                <label for="which_department_have_you_visited">Which departments have you visited?</label>
+                <select id="which_department_have_you_visited" onchange="enable5(this)" name="which_department_have_you_visited">
+                  <option value="">Please select</option>
+                  <option value="Department1">Department1</option>
+                  <option value="Department2">Department2</option>
+                  <option value="Department3">Department3</option>
+                  <option value="Department4">Department4</option>
+                  <option value="5">Other, please specify</option>
+                </select>
+
+                <label for name="ethnicity1" id="ethnicity1" class="d-none">
+                    <input type="text" id="race/ethnicity" name="race/ethnicity" size="30"></label>
+
+                <br><br>
 
                 <br><br>
                  <div class="minute">
@@ -146,50 +158,10 @@
                         <label for="6">N/A</label>
                         
                     </label>
-                
-                    <label for="I was able to park conveniently near the building">
-                        <li>I was able to park conveniently near the building</li>
-                        <input
-                            type="radio"
-                            id="question2"
-                            name="I was able to park conveniently near the building"
-                            value="1"
-                            required>
-                        <label for="1">1</label>
-                        <input
-                            type="radio"
-                            id="question2"
-                            name="I was able to park conveniently near the building"
-                            value="2">
-                        <label for="2">2</label>
-                        <input
-                            type="radio"
-                            id="question2"
-                            name="I was able to park conveniently near the building"
-                            value="3">
-                        <label for="3">3</label>
-                        <input
-                            type="radio"
-                            id="question2"
-                            name="I was able to park conveniently near the building"
-                            value="4">
-                        <label for="4">4</label>
-                        <input
-                            type="radio"
-                            id="question2"
-                            name="I was able to park conveniently near the building"
-                            value="5">
-                        <label for="5">5</label>
-                        <input
-                            type="radio"
-                            id="question2"
-                            name="I was able to park conveniently near the building"
-                            value="N/A">
-                        <label for="NA">N/A</label>
-                    </label>
+                            
 
                     <label for="I found it easy to navigate around the clinic, the corridors and spaces were well organized">
-                        <li>I found it easy to navigate around the clinic, the corridors and spaces were well organized</li>
+                        <li>I found it easy to navigate around the clinic, the corridors and spaces were well organized <br>and the signs were easy to understand and follow</li>
                         <input
                             type="radio"
                             id="question3"
@@ -227,55 +199,15 @@
                             name="I found it easy to navigate around the clinic, the corridors and spaces were well organized"
                             value="N/A">
                         <label for="18">N/A</label>
-                    </label>
-
-                    <label for="The wayfinding to the  clinic and inside the clinic were easy to understand and follow">
-                        <li>The wayfinding to the clinic and inside the clinic were easy to understand and follow</li>
-                        <input
-                            type="radio"
-                            id="question4"
-                            name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow"
-                            value="1"
-                            required>
-                        <label for="19">1</label>
-                        <input
-                            type="radio"
-                            id="question4"
-                            name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow"
-                            value="2">
-                        <label for="20">2</label>
-                        <input
-                            type="radio"
-                            id="question4"
-                            name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow"
-                            value="3">
-                        <label for="21">3</label>
-                        <input
-                            type="radio"
-                            id="question4"
-                            name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow"
-                            value="4">
-                        <label for="22">4</label>
-                        <input
-                            type="radio"
-                            id="question4"
-                            name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow"
-                            value="5">
-                        <label for="23">5</label>
-                        <input
-                            type="radio"
-                            id="question4"
-                            name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow"
-                            value="N/A">
-                        <label for="24">N/A</label>
                         <br>
-                        <textarea id="The wayfinding to the  clinic and inside the clinic were easy to understand and follow" type="textarea" name="The wayfinding to the  clinic and inside the clinic were easy to understand and follow" required placeholder="Please enter additional feedback for this question here"></textarea>
+                        <textarea id="I found it easy to navigate around the clinic, the corridors and spaces were well organized" type="textarea" name="I found it easy to navigate around the clinic, the corridors and spaces were well organized" required placeholder="Please enter additional feedback for this question here"></textarea>
+                        
+                    </label>
 
                     
-                    </label>
 
                     <label for="The patient waiting area was well designed with a good selection chairs">
-                        <li>The patient waiting area was well designed with a good selection chairs</li>
+                        <li>The waiting area was well designed with a good selection of chairs</li>
                         <input
                             type="radio"
                             id="question5"
@@ -315,12 +247,12 @@
                         <label for="30">N/A</label>
 
                         <br>
-                        <textarea id="TThe patient waiting area was well designed with a good selection chairs" type="textarea" name="The patient waiting area was well designed with a good selection chairs" placeholder="Please enter additional feedback for this question here"></textarea>
+                        <textarea id="The patient waiting area was well designed with a good selection chairs" type="textarea" name="The patient waiting area was well designed with a good selection chairs" placeholder="Please enter additional feedback for this question here"></textarea>
 
                     </label>
 
                     <label for="I was satisfied with the waiting experience">
-                        <li>I was satisfied with the waiting experience</li>
+                        <li>The waiting room was at a good temperature and the lighting, views and noise made it a comfortable place to be </li>
                         <input
                             type="radio"
                             id="question6"
@@ -358,93 +290,58 @@
                             name="I was satisfied with the waiting experience"
                             value="N/A">
                         <label for="36">N/A</label>
+
+                        <br>
+                        <textarea id="I was satisfied with the waiting experience" type="textarea" name="I was satisfied with the waiting experience" placeholder="Please enter additional feedback for this question here"></textarea>
                     </label>
 
-                    <label for="The noise level was appropriate">
-                        <li>The noise level was appropriate </li>
-                        <input
-                            type="radio"
-                            id="question7"
-                            name="The noise level was appropriate"
-                            value="1"
-                            required>
-                        <label for="37">1</label>
-                        <input
-                            type="radio"
-                            id="question7"
-                            name="The noise level was appropriate"
-                            value="2">
-                        <label for="38">2</label>
-                        <input
-                            type="radio"
-                            id="question7"
-                            name="The noise level was appropriate"
-                            value="3">
-                        <label for="39">3</label>
-                        <input
-                            type="radio"
-                            id="question7"
-                            name="The noise level was appropriate"
-                            value="4">
-                        <label for="40">4</label>
-                        <input
-                            type="radio"
-                            id="question7"
-                            name="The noise level was appropriate"
-                            value="5">
-                        <label for="41">5</label>
-                        <input
-                            type="radio"
-                            id="question7"
-                            name="The noise level was appropriate"
-                            value="N/A">
-                        <label for="42">N/A</label>
-                    </label>
+                    
 
                     <label for="The exam rooms allowed easy communication with clinician">
                     
-                        <li>The exam rooms allowed easy communication with clinician, ensured my privacy and <br>I felt my personal information would be secure</li>
+                        <li>The clinic rooms allowed easy communication with clinician, ensured my privacy and <br>I felt my personal information would be secure</li>
                         <input
                             type="radio"
                             id="question8"
-                            name="The exam rooms allowed easy communication with clinician"
+                            name="The clinic rooms allowed easy communication with clinician"
                             value="1"
                             required>
                         <label for="43">1</label>
                         <input
                             type="radio"
                             id="question8"
-                            name="The exam rooms allowed easy communication with clinician"
+                            name="The clinic rooms allowed easy communication with clinician"
                             value="2">
                         <label for="44">2</label>
                         <input
                             type="radio"
                             id="question8"
-                            name="The exam rooms allowed easy communication with clinician"
+                            name="The clinic rooms allowed easy communication with clinician"
                             value="3">
                         <label for="45">3</label>
                         <input
                             type="radio"
                             id="question8"
-                            name="The exam rooms allowed easy communication with clinician"
+                            name="The clinic rooms allowed easy communication with clinician"
                             value="4">
                         <label for="46">4</label>
                         <input
                             type="radio"
                             id="question8"
-                            name="The exam rooms allowed easy communication with clinician"
+                            name="The clinic rooms allowed easy communication with clinician"
                             value="5">
                         <label for="47">5</label>
                         <input
                             type="radio"
                             id="question8"
-                            name="The exam rooms allowed easy communication with clinician"
+                            name="The clinic rooms allowed easy communication with clinician"
                             value="N/A">
                         <label for="48">N/A</label>
                     </label>
 
                     <label for="I had a clear view of the clinician and the computer screen in the exam room">
                     <li>I had a clear view of the clinician and the computer screen in the exam room or other procedure rooms<br>(If there’s no computer, please select N/A as the answer)</li>
+                    
                     <input
                         type="radio"
                         id="question9"
