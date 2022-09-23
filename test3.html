@@ -226,7 +226,7 @@ body div:last-child {
            <li>
              <label>
                <div class="checkbox-container">
-                 <input type="checkbox" name="styles" id="opt-a" value="Inpatient ward"/>
+                 <input type="checkbox" name="department" id="opt-a" value="Inpatient ward"/>
                  <div class="checkmark">
                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path d="M0 0h24v24H0z" fill="none"/>
@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = dropdownCheckbox.querySelector(".list-container");
 	const panel = dropdownCheckbox.querySelector(".panel-container");
 	const arrow = dropdownCheckbox.querySelector(".arrow-container");
-	const checkboxes = list.querySelectorAll("input[name=styles]");
+	const checkboxes = list.querySelectorAll("input[name=department");
 	const currentSelection = document.querySelector("p.current-selection");
 	
 	let currentSelectionSet = new Set();

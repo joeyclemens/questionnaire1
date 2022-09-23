@@ -95,7 +95,7 @@
                         <li>
                           <label>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="styles" id="opt-a" value="Inpatient ward"/>
+                              <input type="checkbox" name="department" id="opt-a" value="Inpatient ward"/>
                               <div class="checkmark">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M0 0h24v24H0z" fill="none"/>
@@ -109,7 +109,7 @@
                         <li>
                           <label>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="styles" id="opt-b" value="Intensive care"/>
+                              <input type="checkbox" name="department" id="opt-b" value="Intensive care"/>
                               <div class="checkmark">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M0 0h24v24H0z" fill="none"/>
@@ -123,7 +123,7 @@
                         <li>
                           <label>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="styles" id="opt-c" value="Outpatient clinics"/>
+                              <input type="checkbox" name="department" id="opt-c" value="Outpatient clinics"/>
                               <div class="checkmark">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M0 0h24v24H0z" fill="none"/>
@@ -137,7 +137,7 @@
                         <li>
                           <label>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="styles" id="opt-d" value="Operating Theatre"/>
+                              <input type="checkbox" name="department" id="opt-d" value="Operating Theatre"/>
                               <div class="checkmark">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M0 0h24v24H0z" fill="none"/>
@@ -151,7 +151,7 @@
                         <li>
                           <label>
                             <div class="checkbox-container">
-                              <input type="checkbox" name="styles" id="opt-e" value="Day ward"/>
+                              <input type="checkbox" name="department" id="opt-e" value="Day ward"/>
                               <div class="checkmark">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M0 0h24v24H0z" fill="none"/>
@@ -165,7 +165,7 @@
                         <li>
                          <label>
                            <div class="checkbox-container">
-                             <input type="checkbox" name="styles" id="opt-d" value="Diagnostic imaging"/>
+                             <input type="checkbox" name="department" id="opt-d" value="Diagnostic imaging"/>
                              <div class="checkmark">
                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M0 0h24v24H0z" fill="none"/>
@@ -179,7 +179,7 @@
                        <li>
                          <label>
                            <div class="checkbox-container">
-                             <input type="checkbox" name="styles" id="opt-e" value="Endoscopy"/>
+                             <input type="checkbox" name="department" id="opt-e" value="Endoscopy"/>
                              <div class="checkmark">
                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M0 0h24v24H0z" fill="none"/>
@@ -193,7 +193,7 @@
                        <li>
                          <label>
                            <div class="checkbox-container">
-                             <input type="checkbox" name="styles" id="opt-e" value="Neurological Rehabiliation"/>
+                             <input type="checkbox" name="department" id="opt-e" value="Neurological Rehabiliation"/>
                              <div class="checkmark">
                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M0 0h24v24H0z" fill="none"/>
@@ -207,7 +207,7 @@
                        <li>
                         <label>
                           <div class="checkbox-container">
-                            <input type="checkbox" name="styles" id="opt-e" value="Other"/>
+                            <input type="checkbox" name="department" id="opt-e" value="Other"/>
                             <div class="checkmark">
                               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0h24v24H0z" fill="none"/>
@@ -217,7 +217,7 @@
                             <span class="option-label">Other, please specify</span>
                           </div>
                           <label for name="Department1" id="Department1" class="d-none">
-                            <input type="text" id="Department" name="Department" size="30" placeholder="Enter department here"></label>
+                            <input type="text" id="Other_Department" name="Department" size="30" placeholder="Enter department here"></label>
                         </label>
                 
                         
@@ -723,7 +723,7 @@
       const list = dropdownCheckbox.querySelector(".list-container");
         const panel = dropdownCheckbox.querySelector(".panel-container");
         const arrow = dropdownCheckbox.querySelector(".arrow-container");
-        const checkboxes = list.querySelectorAll("input[name=styles]");
+        const checkboxes = list.querySelectorAll("input[name=department]");
         const currentSelection = document.querySelector("p.current-selection");
         
         let currentSelectionSet = new Set();
