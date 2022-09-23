@@ -56,7 +56,14 @@ top: 10px;
   max-width: 30%;  
   height: auto;   
   left: 5px;
- 
+}
+
+.info2 {
+  width: 80%;
+}
+
+.info3 {
+  width: 80%;
 }
 }
 
