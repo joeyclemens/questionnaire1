@@ -221,12 +221,12 @@ textarea {
 
 .form2 h2 {
   position: relative;
-  left: 5px;
+  left: 10px;
 }
 
 .form2 label, textarea {
   position: relative;
-  left: 5px;
+  left: 10px;
 }
 
 .form3 {
