@@ -16,6 +16,7 @@ body {
 
 .header h1 {
   text-align: center;
+  color: #7C99AD;
 }
 
 .header img {
@@ -74,7 +75,7 @@ top: 10px;
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#2290da, #7daac9);
+  background: linear-gradient(#50748A, #7C99AD);
 }
 
 /* Handle on hover */
