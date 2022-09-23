@@ -244,6 +244,7 @@ textarea {
 
 }
 
+
 .minute input {
   width: 90px;
   border-style: solid;
@@ -446,11 +447,19 @@ body div:last-child {
 .dropdown-checkbox .panel-container:hover {
   cursor: pointer;
 }
+.panel {
+  border: #0096FF;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
 .dropdown-checkbox .panel {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .dropdown-checkbox .current-selection, .dropdown-checkbox .option-label {
   user-select: none;
