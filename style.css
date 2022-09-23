@@ -110,14 +110,14 @@ top: 10px;
 .intro {
   position: relative;
   left: 15px;
-  color: grey;
+  color: #7C99AD;
   font-family: Arial, Helvetica, sans-serif;
   width: 95%;
 }
 
 .banner1 {
   position: relative;
-  background-color:#7C99AD;
+  background-color: #00FFFF;
   width: 100%;
 
 }
@@ -232,6 +232,7 @@ textarea {
 .form3 {
   position: relative;
   left: 20px;
+  color: #7C99AD;
 }
 
 .form3 textarea {
