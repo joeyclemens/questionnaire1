@@ -408,3 +408,179 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 }
 
 
+/*all of this following is for the multiselect drop down menu*/
+
+
+
+body div:first-child {
+  place-self: end;
+}
+body div:last-child {
+  place-self: start;
+}
+.dropdown-checkbox {
+  position: relative;
+  display: flex;
+  width: 300px;
+  border: #0096FF;
+  border-width: 2px;
+  font-family: "Nunito";
+  color: #7C99AD;
+  font-size: 0.95em;
+  -webkit-tap-highlight-color: transparent;
+}
+.dropdown-checkbox .panel-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  
+  border: solid rgba(13, 27, 28, 0.15) 2px;
+  border-radius: 5px;
+  background: white;
+  transition: border-color 100ms ease;
+}
+.dropdown-checkbox .panel-container:focus, .dropdown-checkbox .panel-container:active, .dropdown-checkbox .panel-container.active {
+  border-color: #2290da;
+}
+.dropdown-checkbox .panel-container:hover {
+  cursor: pointer;
+}
+.dropdown-checkbox .panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown-checkbox .current-selection, .dropdown-checkbox .option-label {
+  user-select: none;
+  -webkit-user-select: none;
+}
+.dropdown-checkbox .arrow-container {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  transition: transform 200ms ease;
+}
+.dropdown-checkbox .arrow-container.opened {
+  transform: translateY(-50%) rotate(180deg);
+}
+.dropdown-checkbox .arrow {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: #0d1b1c;
+  transition: fill 100ms ease;
+}
+.dropdown-checkbox .list-container {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 15px 20px;
+  padding-right: 0px;
+  border-radius: 5px;
+  background: white;
+  opacity: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transition: opacity 100ms ease, transform 100ms ease;
+}
+.dropdown-checkbox .list-container.shown {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.dropdown-checkbox .list-container.shown .list {
+  transform: scale(1);
+  transition: transform 0 none 100ms;
+}
+.dropdown-checkbox .list {
+  overflow: scroll;
+  overflow-x: hidden;
+  max-height: 200px;
+  padding: 0;
+  margin: 0;
+  transform: scale(0);
+}
+.dropdown-checkbox .list::-webkit-scrollbar {
+  width: 20px;
+}
+.dropdown-checkbox .list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.dropdown-checkbox .list::-webkit-scrollbar-thumb {
+  background-color: rgba(13, 27, 28, 0.15);
+  border-radius: 20px;
+  border: 7px solid transparent;
+  background-clip: content-box;
+}
+.dropdown-checkbox .list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(13, 27, 28, 0.4);
+}
+.dropdown-checkbox li {
+  list-style: none;
+}
+.dropdown-checkbox li:not(:last-child) {
+  border: 0;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, transparent 0% 5%, rgba(13, 27, 28, 0.15) 20% 80%, transparent 95% 100%) 1 stretch;
+}
+.dropdown-checkbox li label {
+  display: block;
+  font-size: 0.9em;
+  padding: 15px 0;
+  padding-right: 20px;
+}
+.dropdown-checkbox li:first-child label {
+  padding-top: 0;
+}
+.dropdown-checkbox li:last-child label {
+  padding-bottom: 0;
+}
+.dropdown-checkbox li label .checkbox-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 15px;
+  align-items: center;
+}
+.dropdown-checkbox li label .checkbox-container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 17px;
+  height: 17px;
+}
+.dropdown-checkbox .checkmark {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border: solid rgba(13, 27, 28, 0.15) 2px;
+  border-radius: 2px;
+  transition: background 50ms ease-in, border-color 50ms ease-in;
+}
+.dropdown-checkbox .checkmark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: none;
+  transition: fill 100ms ease;
+}
+.dropdown-checkbox input:checked + .checkmark {
+  background: #2290da;
+  border-color: #2290da;
+  border-radius: 50px;
+}
+.dropdown-checkbox input:checked + .checkmark svg {
+  fill: white;
+}
+.dropdown-checkbox input:focus + .checkmark, .dropdown-checkbox input:active + .checkmark {
+  border-color: rgba(165, 187, 66, 0.8);
+  background: rgba(165, 187, 66, 0.8);
+}
+.dropdown-checkbox input:disabled + .checkmark {
+  background: rgba(13, 27, 28, 0.15);
+}

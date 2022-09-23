@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+
+    <style>
+      * {
+  box-sizing: border-box;
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ebebeb;
+  font-family: "Nunito";
+  color: #0d1b1c;
+  font-size: 0.95em;
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  gap: 2em;
+}
+body div:first-child {
+  place-self: end;
+}
+body div:last-child {
+  place-self: start;
+}
+.dropdown-checkbox {
+  position: relative;
+  display: flex;
+  width: 200px;
+  margin: 50px;
+  font-family: "Nunito";
+  color: #0d1b1c;
+  font-size: 0.95em;
+  -webkit-tap-highlight-color: transparent;
+}
+.dropdown-checkbox .panel-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  border: solid rgba(13, 27, 28, 0.15) 2px;
+  border-radius: 5px;
+  background: white;
+  transition: border-color 100ms ease;
+}
+.dropdown-checkbox .panel-container:focus, .dropdown-checkbox .panel-container:active, .dropdown-checkbox .panel-container.active {
+  border-color: #a5bb42;
+}
+.dropdown-checkbox .panel-container:hover {
+  cursor: pointer;
+}
+.dropdown-checkbox .panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown-checkbox .current-selection, .dropdown-checkbox .option-label {
+  user-select: none;
+  -webkit-user-select: none;
+}
+.dropdown-checkbox .arrow-container {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  transition: transform 200ms ease;
+}
+.dropdown-checkbox .arrow-container.opened {
+  transform: translateY(-50%) rotate(180deg);
+}
+.dropdown-checkbox .arrow {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: #0d1b1c;
+  transition: fill 100ms ease;
+}
+.dropdown-checkbox .list-container {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 15px 20px;
+  padding-right: 0px;
+  border-radius: 5px;
+  background: white;
+  opacity: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transition: opacity 100ms ease, transform 100ms ease;
+}
+.dropdown-checkbox .list-container.shown {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.dropdown-checkbox .list-container.shown .list {
+  transform: scale(1);
+  transition: transform 0 none 100ms;
+}
+.dropdown-checkbox .list {
+  overflow: scroll;
+  overflow-x: hidden;
+  max-height: 200px;
+  padding: 0;
+  margin: 0;
+  transform: scale(0);
+}
+.dropdown-checkbox .list::-webkit-scrollbar {
+  width: 20px;
+}
+.dropdown-checkbox .list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.dropdown-checkbox .list::-webkit-scrollbar-thumb {
+  background-color: rgba(13, 27, 28, 0.15);
+  border-radius: 20px;
+  border: 7px solid transparent;
+  background-clip: content-box;
+}
+.dropdown-checkbox .list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(13, 27, 28, 0.4);
+}
+.dropdown-checkbox li {
+  list-style: none;
+}
+.dropdown-checkbox li:not(:last-child) {
+  border: 0;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, transparent 0% 5%, rgba(13, 27, 28, 0.15) 20% 80%, transparent 95% 100%) 1 stretch;
+}
+.dropdown-checkbox li label {
+  display: block;
+  font-size: 0.9em;
+  padding: 15px 0;
+  padding-right: 20px;
+}
+.dropdown-checkbox li:first-child label {
+  padding-top: 0;
+}
+.dropdown-checkbox li:last-child label {
+  padding-bottom: 0;
+}
+.dropdown-checkbox li label .checkbox-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 15px;
+  align-items: center;
+}
+.dropdown-checkbox li label .checkbox-container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 17px;
+  height: 17px;
+}
+.dropdown-checkbox .checkmark {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border: solid rgba(13, 27, 28, 0.15) 2px;
+  border-radius: 2px;
+  transition: background 50ms ease-in, border-color 50ms ease-in;
+}
+.dropdown-checkbox .checkmark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: none;
+  transition: fill 100ms ease;
+}
+.dropdown-checkbox input:checked + .checkmark {
+  background: #a5bb42;
+  border-color: #a5bb42;
+}
+.dropdown-checkbox input:checked + .checkmark svg {
+  fill: white;
+}
+.dropdown-checkbox input:focus + .checkmark, .dropdown-checkbox input:active + .checkmark {
+  border-color: rgba(165, 187, 66, 0.8);
+  background: rgba(165, 187, 66, 0.8);
+}
+.dropdown-checkbox input:disabled + .checkmark {
+  background: rgba(13, 27, 28, 0.15);
+}
+
+ 
+    </style>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+   <body>
+     <div class="dropdown-checkbox">
+       <div class="panel-container">
+         <div class = "panel">
+           <span class="current-selection">Choose option</span>
+           <div class="arrow-container">
+             <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+               <path d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z"/>
+             </svg>
+           </div>
+         </div>
+       </div>
+       <div class="list-container">
+         <ul class="list">
+           <li>
+             <label>
+               <div class="checkbox-container">
+                 <input type="checkbox" name="styles" id="opt-a" value="Inpatient ward"/>
+                 <div class="checkmark">
+                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 0h24v24H0z" fill="none"/>
+                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                   </svg>
+                 </div>
+                 <span class="option-label">Inpatient ward</span>
+               </div>
+             </label>
+           </li>
+           <li>
+             <label>
+               <div class="checkbox-container">
+                 <input type="checkbox" name="styles" id="opt-b" value="Intensive care"/>
+                 <div class="checkmark">
+                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 0h24v24H0z" fill="none"/>
+                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                   </svg>
+                 </div>
+                 <span class="option-label">Intensive care</span>
+               </div>
+             </label>
+           </li>
+           <li>
+             <label>
+               <div class="checkbox-container">
+                 <input type="checkbox" name="styles" id="opt-c" value="Outpatient clinics"/>
+                 <div class="checkmark">
+                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 0h24v24H0z" fill="none"/>
+                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                   </svg>
+                 </div>
+                 <span class="option-label">Outpatient clinics</span>
+               </div>
+             </label>
+           </li>
+           <li>
+             <label>
+               <div class="checkbox-container">
+                 <input type="checkbox" name="styles" id="opt-d" value="Operating Theatre"/>
+                 <div class="checkmark">
+                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 0h24v24H0z" fill="none"/>
+                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                   </svg>
+                 </div>
+                 <span class="option-label">Operating Theatre</span>
+               </div>
+             </label>
+           </li>
+           <li>
+             <label>
+               <div class="checkbox-container">
+                 <input type="checkbox" name="styles" id="opt-e" value="Day ward"/>
+                 <div class="checkmark">
+                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 0h24v24H0z" fill="none"/>
+                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                   </svg>
+                 </div>
+                 <span class="option-label">Day ward</span>
+               </div>
+             </label>
+           </li>
+           <li>
+            <label>
+              <div class="checkbox-container">
+                <input type="checkbox" name="styles" id="opt-d" value="Diagnostic imaging"/>
+                <div class="checkmark">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <span class="option-label">Diagnostic imaging</span>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label>
+              <div class="checkbox-container">
+                <input type="checkbox" name="styles" id="opt-e" value="Endoscopy"/>
+                <div class="checkmark">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <span class="option-label">Endoscopy</span>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label>
+              <div class="checkbox-container">
+                <input type="checkbox" name="styles" id="opt-e" value="Neurological Rehabiliation"/>
+                <div class="checkmark">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </div>
+                <span class="option-label">Neurological Rehabiliation</span>
+              </div>
+            </label>
+          </li>
+          
+         </ul>
+       </div> 
+     </div>
+     <div>Currently selected: <p class="current-selection"></p></div>
+   </body>
+   
+
+
+
+    
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownCheckbox = document.querySelector(".dropdown-checkbox");
+  const list = dropdownCheckbox.querySelector(".list-container");
+	const panel = dropdownCheckbox.querySelector(".panel-container");
+	const arrow = dropdownCheckbox.querySelector(".arrow-container");
+	const checkboxes = list.querySelectorAll("input[name=styles]");
+	const currentSelection = document.querySelector("p.current-selection");
+	
+	let currentSelectionSet = new Set();
+	
+	function toggleDropdown(state = undefined) {
+		panel.classList.toggle("active", state);
+    list.classList.toggle("shown", state);
+		arrow.classList.toggle("opened", state);
+	}
+	
+	function updateSelection(value) {
+		if (currentSelectionSet.has(value)) {
+			currentSelectionSet.delete(value);
+		} else {
+			currentSelectionSet.add(value);
+		};
+		//Send Custom Event "stylesChange"
+		currentSelection.dispatchEvent(new CustomEvent("stylesChange"));
+	}
+	
+  panel.addEventListener("click", () => {
+		toggleDropdown();
+  });
+	
+	document.addEventListener("click", (e) => {
+		let wasClickedInside = dropdownCheckbox.contains(e.target);
+		if (!wasClickedInside) toggleDropdown(false);
+	});
+	
+	for (var i = 0; i < checkboxes.length; i++) {
+		checkboxes[i].addEventListener("change", (e) => {
+			updateSelection(e.currentTarget.value);
+		});
+	};
+	
+	//stylesChange Event Handler
+	currentSelection.addEventListener("stylesChange", (e) => {
+		console.log("stylesChange");
+		e.currentTarget.innerHTML = [...currentSelectionSet].join(' ');
+	})
+	
+});
+    </script>
+  </body>
+</html>
