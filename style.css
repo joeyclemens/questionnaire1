@@ -251,6 +251,10 @@ textarea {
   border-radius: 5px;
 
 }
+
+.row {
+  height: 100px;
+}
 /*===================radio button style=========================*/
 :root {
   --form-control-color: #0096FF;
