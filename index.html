@@ -87,8 +87,8 @@
                   <option value="5">Other, please specify</option>
                 </select>
 
-                <label for name="ethnicity1" id="ethnicity1" class="d-none">
-                    <input type="text" id="race/ethnicity" name="race/ethnicity" size="30"></label>
+                <label for name="Department1" id="Department1" class="d-none">
+                    <input type="text" id="Department" name="Department" size="30"></label>
 
                 <br><br>
 
@@ -551,9 +551,9 @@
             function enable5(answer) {
                 console.log(answer.value);
                 if(answer.value == 5) {
-                    document.getElementById('ethnicity1').classList.remove('d-none');
+                    document.getElementById('Department1').classList.remove('d-none');
                 } else {
-                    document.getElementById('ethnicity1').classList.add('d-none');
+                    document.getElementById('Department1').classList.add('d-none');
                 }
             };
                 
