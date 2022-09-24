@@ -585,8 +585,8 @@ body div:last-child {
   fill: white;
 }
 .dropdown-checkbox input:focus + .checkmark, .dropdown-checkbox input:active + .checkmark {
-  border-color: rgba(165, 187, 66, 0.8);
-  background: rgba(165, 187, 66, 0.8);
+  border-color: #2290da;
+  background: #2290da5e;
 }
 .dropdown-checkbox input:disabled + .checkmark {
   background: rgba(13, 27, 28, 0.15);
