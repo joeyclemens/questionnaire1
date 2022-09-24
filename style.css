@@ -73,7 +73,7 @@ body {
 .socialmob .fa-linkedin {
   position: fixed;
   left: 5px;
-  bottom: 0;
+  bottom: 5px;
   background: #007bb5;
   color: white;
 }
