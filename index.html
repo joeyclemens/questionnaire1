@@ -54,13 +54,14 @@
 
             <div class="form3">
                 
-                <label for="age">How old are you?
+                
+                <label for="age">1. How old are you?
                     <input type="number" id="age" name="age" min="1" max="150" required>
                 </label>
 
                 <br><br>
        
-                <label for="How_did_you_get_to_clinic">How did you get to the clinic?</label>
+                <label for="How_did_you_get_to_clinic">2. How did you get to the clinic?</label>
                 <select id="How_did_you_get_to_clinic" name="How_did_you_get_to_clinic" required>
                   <option value="">Please select</option>
                   <option value="By car">By car</option>
@@ -70,19 +71,22 @@
             
                 <br><br>
 
-                <label for="number_of_visits">How many times have you visited the clinic?
+                <label for="number_of_visits">3. How many times have you visited the clinic?
                     <input type="number" id="number_of_visits" name="number_of_visits" min="1" max="1000" required>
                 </label>
 
                 <br><br>
 
+                <div class="departmentp">
+                    <p>4. Which departments have you visited?</p>  </div>
+              
                 <!--This next section is the incredibly long and complicated bit for the 
                 multiple selection of departments... -->
 
                 <div class="dropdown-checkbox">
                     <div class="panel-container">
                       <div class = "panel">
-                        <span class="current-selection">Which departments have you visited?</span>
+                        <span class="current-selection">Choose all that apply</span>
                         <div class="arrow-container">
                           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                             <path d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z"/>
@@ -90,6 +94,7 @@
                         </div>
                       </div>
                     </div>
+                    
                     <div class="list-container">
                       <ul class="list">
                         <li>
@@ -226,12 +231,12 @@
                       </ul>
                     </div> 
                   </div>
-                  <div>Currently selected: <p class="current-selection"></p> </div>
-
+                  <br>
+                  <div><u>Currently selected:</u> <p class="current-selection"></p> </div>
                
                 <br><br>
                  <div class="minute">
-                <label for="how_long_did_you_wait">How long did you wait in a waiting room or space?
+                <label for="how_long_did_you_wait">5. How long did you wait in a waiting room or space?
                     <input type="number" id="how_long_did_you_wait" name="how_long_did_you_wait" min="1" max="1000" required placeholder=" In Minutes"> 
                 </label>
             </div>
