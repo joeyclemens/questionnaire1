@@ -412,7 +412,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 }
 
 
-/*all of this following is for the multiselect drop down menu*/
+/*All of this following is for the multiselect drop down menu*/
 
 
 
@@ -426,7 +426,7 @@ body div:last-child {
   position: relative;
   display: flex;
   width: 300px;
-  border: #0096FF;
+  border: #2290da;
   border-width: 2px;
   font-family: Arial, Helvetica, sans-serif;
   color: #7C99AD;
@@ -448,8 +448,8 @@ body div:last-child {
   cursor: pointer;
 }
 .panel {
-  border: #0096FF;
-  border-width: 1.5px;
+  border: #2290da;
+  border-width: 2px;
   border-style: solid;
   border-radius: 5px;
 }
