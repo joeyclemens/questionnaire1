@@ -436,10 +436,7 @@ body div:last-child {
   height: 100%;
   width: 100%;
   
-  border: solid rgba(13, 27, 28, 0.15) 2px;
-  border-radius: 5px;
-  background: white;
-  transition: border-color 100ms ease;
+
 }
 .dropdown-checkbox .panel-container:focus, .dropdown-checkbox .panel-container:active, .dropdown-checkbox .panel-container.active {
   border-color: #2290da;
