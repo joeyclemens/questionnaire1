@@ -11,8 +11,17 @@ body {
        url('/fonts/HelveticaNeue_Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
+
+@font-face {
+  font-family: 'HelveticaNeue-Roman';
+  src: url('/fonts/HelveticaNeue-Roman.woff2') format('woff2'),
+       url('/fontsHelveticaNeue-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 .header {
   position: sticky;
@@ -26,6 +35,7 @@ body {
 .header h1 {
   text-align: center;
   color: #7C99AD;
+  font-family: 'HelveticaNeue-Roman';
 }
 
 .header img {
@@ -58,6 +68,7 @@ body {
   .header h1 {
     padding-top: 20px;
     text-align: center;
+    font-family: 'HelveticaNeue-Roman';
   }
 
   .header img {
@@ -148,11 +159,11 @@ body {
 .banner1 h1 {
   position: relative;
   left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'HelveticaNeue-Roman';
 }
 
 li {
-  font-family: Arial, Helvetica, sans-serif;
+  
   padding-top: 10px;
   padding-bottom: 10px;
   color: grey;
@@ -172,7 +183,7 @@ li {
 .banner2 h1 {
   position: relative;
   left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'HelveticaNeue-Roman';
 }
 
 .banner3 {
@@ -186,7 +197,7 @@ li {
 .banner3 h1 {
   position: relative;
   left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'HelveticaNeue-Roman';
 }
 
 /* css for the hidden text box */
