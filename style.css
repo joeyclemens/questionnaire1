@@ -5,6 +5,15 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'HelveticaNeue_Light';
+  src: url('/fonts/HelveticaNeue_Light.woff2') format('woff2'),
+       url('/fonts/HelveticaNeue_Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .header {
   position: sticky;
   top: 0;
