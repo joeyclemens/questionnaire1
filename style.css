@@ -35,7 +35,7 @@ body {
 .header h1 {
   text-align: center;
   color: #7C99AD;
-  font-family: 'HelveticaNeue-Roman';
+ font-family: 'HelveticaNeue_Light';
 }
 
 .header img {
@@ -68,7 +68,7 @@ body {
   .header h1 {
     padding-top: 20px;
     text-align: center;
-    font-family: 'HelveticaNeue-Roman';
+   font-family: 'HelveticaNeue_Light';
   }
 
   .header img {
@@ -159,7 +159,7 @@ body {
 .banner1 h1 {
   position: relative;
   left: 10px;
-  font-family: 'HelveticaNeue-Roman';
+ font-family: 'HelveticaNeue_Light';
 }
 
 li {
@@ -183,7 +183,7 @@ li {
 .banner2 h1 {
   position: relative;
   left: 10px;
-  font-family: 'HelveticaNeue-Roman';
+ font-family: 'HelveticaNeue_Light';
 }
 
 .banner3 {
@@ -197,7 +197,7 @@ li {
 .banner3 h1 {
   position: relative;
   left: 10px;
-  font-family: 'HelveticaNeue-Roman';
+ font-family: 'HelveticaNeue_Light';
 }
 
 /* css for the hidden text box */
