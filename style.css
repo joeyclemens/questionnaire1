@@ -40,7 +40,15 @@ body {
 
 .header img {
   position: fixed;
-  max-width: 80%;  x
+  max-width: 80%;  
+  height: auto;   
+  left: 40px;
+  top: 10px;
+}
+
+.header a {
+  position: fixed;
+  max-width: 80%;  
   height: auto;   
   left: 40px;
   top: 10px;
