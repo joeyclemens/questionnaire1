@@ -46,7 +46,7 @@ body {
   top: 10px;
 }
 
-.header a {
+.header img, a {
   position: fixed;
   max-width: 80%;  
   height: auto;   
