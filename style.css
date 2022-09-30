@@ -46,13 +46,6 @@ body {
   top: 10px;
 }
 
-.header img, a {
-  position: fixed;
-  max-width: 80%;  
-  height: auto;   
-  left: 40px;
-  top: 10px;
-}
 
 .bigline {
   height: 5px;
