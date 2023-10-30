@@ -7,16 +7,16 @@ body {
 
 @font-face {
   font-family: 'HelveticaNeue_Light';
-  src: url('/fonts/HelveticaNeue_Light.woff2') format('woff2'),
-       url('/fonts/HelveticaNeue_Light.woff') format('woff');
+  src: url('fonts/HelveticaNeue_Light.woff2') format('woff2'),
+       url('fonts/HelveticaNeue_Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HelveticaNeue-Roman';
-  src: url('/fonts/HelveticaNeue-Roman.woff2') format('woff2'),
-       url('/fontsHelveticaNeue-Roman.woff') format('woff');
+  src: url('fonts/HelveticaNeue-Roman.woff2') format('woff2'),
+       url('fontsHelveticaNeue-Roman.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -54,6 +54,11 @@ body {
 
 }
 
+.backyougo {
+  position: fixed;
+  right: 10px;
+
+}
 @media screen and (max-width: 600px){
 
 
@@ -201,6 +206,20 @@ li {
  font-family: 'HelveticaNeue_Light';
 }
 
+.banner4 {
+  position: relative;
+  background-color: #f3b064;
+  width: 90%;
+  border-radius: 50px;
+  left: 5px;
+}
+
+.banner4 h1 {
+  position: relative;
+  left: 10px;
+ font-family: 'HelveticaNeue_Light';
+}
+
 /* css for the hidden text box */
 .d-none {
   display: none;
@@ -269,7 +288,7 @@ textarea {
 .form3 {
   position: relative;
   left: 20px;
-  color: #7C99AD;
+
 }
 
 .form3 textarea {
