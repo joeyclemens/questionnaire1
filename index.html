@@ -1,11 +1,967 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=http://mjmsurvey.rf.gd/Patient%20survey/index.html">
-    <title>Redirecting...</title>
-</head>
-<body>
-    
-</body>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Patient Survey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+            function disableBack() { window.history.forward(); }
+            setTimeout("disableBack()", 0);
+            window.onunload = function () { null };
+        </script>
+    </head>
+    <body>
+
+       <div class="header">
+        <img src="images/image001.png" alt="mjm logo">
+       
+            <h1>Post Occupancy Evaluation of <br> Tessa Jowell Health centre. <br> <u>Patient Survey</u> </h1>
+            <p>
+              <div class="progress-container">
+                  <div class="progress-bar" id="myBar"></div>
+                  <div class="bigline"></div>
+                </div>
+            </p>
+
+              
+            </div>
+
+        <div class="intro">
+            <p>This post occupation evaluation asks for your views about 
+                the physical environment and your experience at 
+                <u><b>Tessa Jowell Health centre.</b></u>
+                Thinking about your recent visit to this clinic, 
+                please select the number that most closely represents 
+                your level of agreement with each statement below. 
+                We are interested in your honest views (either negative or positive). 
+                If you have comments about any one statement, 
+                please write down in spaces below the statement or in the feedback section at the end. 
+                Thank you in advance for your time. 
+                All the data collected will be for MJ Medical internal use only. 
+
+
+            </p>
+        </div>
+
+       
+
+        <form name="patient" action="thankyou.html" method="POST" data-netlify="true">
+
+            <div class="banner3">
+                <h1>Patient Information</h1>
+            </div>
+
+            <div class="info2">
+                <h4>These questions are for statistical purpose only. Please mark or write down the responses.</h4>
+            </div>
+
+            <div class="form3">
+                
+                
+                <label for="age">1. How old are you?<input type="number" id="age" name="age" min="1" max="150" required></label>
+                    
+                <br><br>
+
+                <label for="rfv">2. Reason for visit<br>
+                  <textarea id="rfv" name="rfv" rows="4" cols="50" required placeholder="Please enter your reason for visiting the Tella Jowell Health Centre"></textarea>
+              </label>
+              <br><br>
+        
+
+
+                   
+               <label for="department">3. Which departments have you visited?<br>
+                  <textarea id="department" name="department" rows="4" cols="50" required placeholder="Please enter the departments you visited at the Tella Jowell Health Centre"></textarea>
+              </label>
+              <br><br>
+                <!--This next section is the incredibly long and complicated bit for the 
+                multiple selection of departments... 
+
+                <div class="dropdown-checkbox">
+                    <div class="panel-container">
+                      <div class = "panel">
+                        <span class="current-selection">Choose all that apply</span>
+                        <div class="arrow-container">
+                          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="list-container">
+                      <ul class="list">
+                        <li>
+                          <label>
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="department" id="opt-a" value="Inpatient ward"/>
+                              <div class="checkmark">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                              </div>
+                              <span class="option-label">Inpatient ward</span>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                          <label>
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="department" id="opt-b" value="Intensive care"/>
+                              <div class="checkmark">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                              </div>
+                              <span class="option-label">Intensive care</span>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                          <label>
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="department" id="opt-c" value="Outpatient clinics"/>
+                              <div class="checkmark">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                              </div>
+                              <span class="option-label">Outpatient clinics</span>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                          <label>
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="department" id="opt-d" value="Operating Theatre"/>
+                              <div class="checkmark">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                              </div>
+                              <span class="option-label">Operating Theatre</span>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                          <label>
+                            <div class="checkbox-container">
+                              <input type="checkbox" name="department" id="opt-e" value="Day ward"/>
+                              <div class="checkmark">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                              </div>
+                              <span class="option-label">Day ward</span>
+                            </div>
+                          </label>
+                        </li>
+                        <li>
+                         <label>
+                           <div class="checkbox-container">
+                             <input type="checkbox" name="department" id="opt-d" value="Diagnostic imaging"/>
+                             <div class="checkmark">
+                               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                               </svg>
+                             </div>
+                             <span class="option-label">Diagnostic imaging</span>
+                           </div>
+                         </label>
+                       </li>
+                       <li>
+                         <label>
+                           <div class="checkbox-container">
+                             <input type="checkbox" name="department" id="opt-e" value="Endoscopy"/>
+                             <div class="checkmark">
+                               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                               </svg>
+                             </div>
+                             <span class="option-label">Endoscopy</span>
+                           </div>
+                         </label>
+                       </li>
+                       <li>
+                         <label>
+                           <div class="checkbox-container">
+                             <input type="checkbox" name="department" id="opt-e" value="Neurological Rehabiliation"/>
+                             <div class="checkmark">
+                               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                               </svg>
+                             </div>
+                             <span class="option-label">Neurological Rehabiliation</span>
+                           </div>
+                         </label>
+                       </li>
+                       <li>
+                        <label>
+                          <div class="checkbox-container">
+                            <input type="checkbox" name="department" id="opt-e" value="Other"/>
+                            <div class="checkmark">
+                              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                              </svg>
+                            </div>
+                            <span class="option-label">Other, please specify</span>
+                          </div>
+                          <label for name="Other_Department" id="Other_Department" class="d-none">
+                            <input type="text" id="Other_Department" name="Other_Department" size="30" placeholder="Enter department here"></label>
+                        </label>
+                
+                        
+                        </li>
+                       
+
+                      </ul>
+                      
+                    </div> 
+                  </div>
+                 
+                  <div><u>Currently selected:</u> <p class="current-selection"></p> </div>
+                  <input type="hidden" name="selectedDepartments" id="selectedDepartmentsInput">
+                  <br>
+
+-->
+
+                <label for="transportation">4. How did you get to the clinic?</label>
+                <select id="transportation" name="transportation" required>
+                  <option value="">Please select</option>
+                  <option value="car">By car</option>
+                  <option value="Walk">Walk</option>
+                  <option value="Public">By bus or other public transportation</option>
+                  <option value="Cycle">By Bicycle</option>
+                </select>
+            
+                <br><br>
+
+                </div>
+
+
+                
+           
+           <div class="banner2">
+            <h1>Clinic Design</h1>
+            </div>
+
+          <div class="info1">
+              <h4>To what extent do you agree or disagree with the following statements on a scale of 1 to 5 where 1 = strongly disagree and 5 = strongly agree? </h4>
+
+          </div>
+
+          <div class="form1">
+            <ol>
+                <label for="The_location_of_this_clinic">
+                    <li>The location of this Health Centre was convenient for me to get to </li>
+                    <input
+                        type="radio"
+                        id="question1"
+                        name="The_location_of_this_clinic"
+                        value="1"
+                        required>
+                    <label for="1">1</label>
+                    <input
+                        type="radio"
+                        id="question1"
+                        name="The_location_of_this_clinic"
+                        value="2">
+                    <label for="2">2</label>
+                    <input
+                        type="radio"
+                        id="question1"
+                        name="The_location_of_this_clinic"
+                        value="3">
+                    <label for="3">3</label>
+                    <input
+                        type="radio"
+                        id="question1"
+                        name="The_location_of_this_clinic"
+                        value="4">
+                    <label for="4">4</label>
+                    <input
+                        type="radio"
+                        id="question1"
+                        name="The_location_of_this_clinic"
+                        value="5">
+                    <label for="5">5</label>
+                    <input
+                        type="radio"
+                        id="question1"
+                        name="The_location_of_this_clinic"
+                        value="N/A">
+                    <label for="6">N/A</label>
+                    
+                </label>
+                        
+
+                <label for="easy_access_to_building">
+                    <li>There was easy access to the building from the car park</li>
+                    <input
+                        type="radio"
+                        id="question2"
+                        name="easy_access_to_building"
+                        value="1"
+                        required>
+                    <label for="13">1</label>
+                    <input
+                        type="radio"
+                        id="question2"
+                        name="easy_access_to_building"
+                        value="2">
+                    <label for="14">2</label>
+                    <input
+                        type="radio"
+                        id="question2"
+                        name="easy_access_to_building"
+                        value="3">
+                    <label for="15">3</label>
+                    <input
+                        type="radio"
+                        id="question2"
+                        name="easy_access_to_building"
+                        value="4">
+                    <label for="16">4</label>
+                    <input
+                        type="radio"
+                        id="question2"
+                        name="easy_access_to_building"
+                        value="5">
+                    <label for="17">5</label>
+                    <input
+                        type="radio"
+                        id="question2"
+                        name="easy_access_to_building"
+                        value="N/A">
+                    <label for="18">N/A</label>
+                    
+                </label>
+
+              
+                <label for="building_navigation">
+                <li>The building is easy to navigate with easy to follow signage</li>
+                
+                <input
+                    type="radio"
+                    id="question6"
+                    name="building_navigation"
+                    value="1"
+                    required>
+                <label for="49">1</label>
+                <input
+                    type="radio"
+                    id="question6"
+                    name="building_navigation"
+                    value="2">
+                <label for="50">2</label>
+                <input
+                    type="radio"
+                    id="question6"
+                    name="building_navigation"
+                    value="3">
+                <label for="51">3</label>
+                <input
+                    type="radio"
+                    id="question6"
+                    name="building_navigation"
+                    value="4">
+                <label for="52">4</label>
+                <input
+                    type="radio"
+                    id="question6"
+                    name="building_navigation"
+                    value="5">
+                <label for="53">5</label>
+                <input
+                    type="radio"
+                    id="question6"
+                    name="building_navigation"
+                    value="N/A">
+                <label for="54">N/A</label>
+            </label>
+
+            <label for="The_waiting_area_is_well_designed">
+                <li>The waiting area is well designed with a good selection of chairs</li>
+                <input
+                    type="radio"
+                    id="question7"
+                    name="The_waiting_area_is_well_designed"
+                    value="1"
+                    required>
+                <label for="55">1</label>
+                <input
+                    type="radio"
+                    id="question7"
+                    name="The_waiting_area_is_well_designed"
+                    value="2">
+                <label for="56">2</label>
+                <input
+                    type="radio"
+                    id="question7"
+                    name="The_waiting_area_is_well_designed"
+                    value="3">
+                <label for="57">3</label>
+                <input
+                    type="radio"
+                    id="question7"
+                    name="The_waiting_area_is_well_designed"
+                    value="4">
+                <label for="58">4</label>
+                <input
+                    type="radio"
+                    id="question7"
+                    name="The_waiting_area_is_well_designed"
+                    value="5">
+                <label for="59">5</label>
+                <input
+                    type="radio"
+                    id="question7"
+                    name="The_waiting_area_is_well_designed"
+                    value="N/A">
+                <label for="60">N/A</label>
+            </label>
+
+            <label for="easy_access_to_visitor_toilets">
+                <li>There is easy access to visitor toilets</li>
+                <input
+                    type="radio"
+                    id="question8"
+                    name="easy_access_to_visitor_toilets"
+                    value="1"
+                    required>
+                <label for="139">1</label>
+                <input
+                    type="radio"
+                    id="question8"
+                    name="easy_access_to_visitor_toilets"
+                    value="2">
+                <label for="140">2</label>
+                <input
+                    type="radio"
+                    id="question8"
+                    name="easy_access_to_visitor_toilets"
+                    value="3">
+                <label for="141">3</label>
+                <input
+                    type="radio"
+                    id="question8"
+                    name="easy_access_to_visitor_toilets"
+                    value="4">
+                <label for="142">4</label>
+                <input
+                    type="radio"
+                    id="question8"
+                    name="easy_access_to_visitor_toilets"
+                    value="5">
+                <label for="143">5</label>
+                <input
+                    type="radio"
+                    id="question8"
+                    name="easy_access_to_visitor_toilets"
+                    value="N/A">
+                <label for="144">N/A</label>
+                
+            </label>
+
+            <!--<br><br>
+            <label for="easy_access_to_visitor_toilets_text">
+            <textarea id="easy_access_to_visitor_toilets_text" type="textarea" name="easy_access_to_visitor_toilets_text" required placeholder="Please enter additional feedback for this question here"></textarea>
+            </label>
+
+            <br><br>-->
+
+          <label for="The_clinic_rooms_support_my_privacy_and_dignity">
+              <li>The clinic rooms support my privacy and dignity </li>
+              <input
+                  type="radio"
+                  id="question9"
+                  name="The_clinic_rooms_support_my_privacy_and_dignity"
+                  value="1"
+                  required>
+              <label for="139">1</label>
+              <input
+                  type="radio"
+                  id="question9"
+                  name="The_clinic_rooms_support_my_privacy_and_dignity"
+                  value="2">
+              <label for="140">2</label>
+              <input
+                  type="radio"
+                  id="question9"
+                  name="The_clinic_rooms_support_my_privacy_and_dignity"
+                  value="3">
+              <label for="141">3</label>
+              <input
+                  type="radio"
+                  id="question9"
+                  name="The_clinic_rooms_support_my_privacy_and_dignity"
+                  value="4">
+              <label for="142">4</label>
+              <input
+                  type="radio"
+                  id="question9"
+                  name="The_clinic_rooms_support_my_privacy_and_dignity"
+                  value="5">
+              <label for="143">5</label>
+              <input
+                  type="radio"
+                  id="question9"
+                  name="The_clinic_rooms_support_my_privacy_and_dignity"
+                  value="N/A">
+              <label for="144">N/A</label>
+              
+          </label>
+
+          <!--<br><br>
+          <label for="The_clinic_rooms_support_my_privacy_and_dignity_text">
+          <textarea id="The_clinic_rooms_support_my_privacy_and_dignity_text" name="The_clinic_rooms_support_my_privacy_and_dignity_text" required placeholder="Please enter additional feedback for this question here"></textarea>
+          </label>
+
+          <br><br>-->
+
+          <label for="sufficient_space_in_clinic_rooms_for_relatives">
+            <li>There is sufficient space in the clinic rooms for relatives/carers</li>
+            <input
+                type="radio"
+                id="question10"
+                name="sufficient_space_in_clinic_rooms_for_relatives"
+                value="1"
+                required>
+            <label for="139">1</label>
+            <input
+                type="radio"
+                id="question10"
+                name="sufficient_space_in_clinic_rooms_for_relatives"
+                value="2">
+            <label for="140">2</label>
+            <input
+                type="radio"
+                id="question10"
+                name="sufficient_space_in_clinic_rooms_for_relatives"
+                value="3">
+            <label for="141">3</label>
+            <input
+                type="radio"
+                id="question10"
+                name="sufficient_space_in_clinic_rooms_for_relatives"
+                value="4">
+            <label for="142">4</label>
+            <input
+                type="radio"
+                id="question10"
+                name="sufficient_space_in_clinic_rooms_for_relatives"
+                value="5">
+            <label for="143">5</label>
+            <input
+                type="radio"
+                id="question10"
+                name="sufficient_space_in_clinic_rooms_for_relatives"
+                value="N/A">
+            <label for="144">N/A</label>
+            
+        </label>
+
+        <!--<br><br>
+        <label for="sufficient_space_in_clinic_rooms_for_relatives_text">
+        <textarea id="sufficient_space_in_clinic_rooms_for_relatives_text" name= "sufficient_space_in_clinic_rooms_for_relatives_text" required placeholder="Please enter additional feedback for this question here"></textarea>
+        </label>
+
+        <br><br>-->
+
+          
+            <label for="equipmentfurniture_meets_my_needs">
+                <li>The equipmentfurniture in the clinic rooms meets my needs</li>
+                <input
+                    type="radio"
+                    id="question12"
+                    name="equipmentfurniture_meets_my_needs"
+                    value="1"
+                    required>
+                <label for="139">1</label>
+                <input
+                    type="radio"
+                    id="question12"
+                    name="equipmentfurniture_meets_my_needs"
+                    value="2">
+                <label for="140">2</label>
+                <input
+                    type="radio"
+                    id="question12"
+                    name="equipmentfurniture_meets_my_needs"
+                    value="3">
+                <label for="141">3</label>
+                <input
+                    type="radio"
+                    id="question12"
+                    name="equipmentfurniture_meets_my_needs"
+                    value="4">
+                <label for="142">4</label>
+                <input
+                    type="radio"
+                    id="question12"
+                    name="equipmentfurniture_meets_my_needs"
+                    value="5">
+                <label for="143">5</label>
+                <input
+                    type="radio"
+                    id="question12"
+                    name="equipmentfurniture_meets_my_needs"
+                    value="N/A">
+                <label for="144">N/A</label>
+            </label>
+           
+            
+
+            
+           
+        <br><br>
+       <label for="features_that_you_liked_or_disliked_building">
+       <li id="departmentLabel">Were there any features that you liked or disliked in the buidling?</li>
+        <textarea id="features_that_you_liked_or_disliked_building_text" name= "features_that_you_liked_or_disliked_building_text" required placeholder="Please enter your answer for this question here"></textarea>
+        
+      </label> 
+
+
+        <br><br>
+        
+      
+         <label for="internal_temperature">
+          <li>How would you rate the rate the internal temperature?</li>
+          <input
+              type="radio"
+              id="question12"
+              name="internal_temperature"
+              value="1"
+              required>
+          <label for="139">Too hot</label>
+          <input
+              type="radio"
+              id="question12"
+              name="internal_temperature"
+              value="2">
+          <label for="140">Too cold</label>
+          <input
+              type="radio"
+              id="question12"
+              name="internal_temperature"
+              value="3">
+          <label for="141">Just right</label>
+          <input
+              type="radio"
+              id="question12"
+              name="internal_temperature"
+              value="4">
+          <label for="142">Varies</label>
+          <input
+              type="radio"
+              id="question12"
+              name="internal_temperature"
+              value="5">
+          <label for="143">Unsure</label>
+         
+      </label>
+
+      
+
+    <label for="internal_lighting">
+      <li>How would you rate the internal lighting?</li>
+      <input
+          type="radio"
+          id="question12"
+          name="internal_lighting"
+          value="1"
+          required>
+      <label for="139">Too bright</label>
+      <input
+          type="radio"
+          id="question12"
+          name="internal_lighting"
+          value="2">
+      <label for="140">Too dull</label>
+      <input
+          type="radio"
+          id="question12"
+          name="internal_lighting"
+          value="3">
+      <label for="141">Just right</label>
+      <input
+          type="radio"
+          id="question12"
+          name="internal_lighting"
+          value="4">
+      <label for="142">Varies</label>
+      <input
+          type="radio"
+          id="question12"
+          name="internal_lighting"
+          value="5">
+      <label for="143">Unsure</label>
+     
+  </label>
+
+  <label for="internal_sound">
+    <li>How would you rate the internal sound-proofing?</li>
+    <input
+        type="radio"
+        id="question12"
+        name="internal_sound"
+        value="1"
+        required>
+    <label for="139">Too noisy</label>
+    <input
+        type="radio"
+        id="question12"
+        name="internal_sound"
+        value="2">
+    <label for="140">Too quiet</label>
+    <input
+        type="radio"
+        id="question12"
+        name="internal_sound"
+        value="3">
+    <label for="141">Just right</label>
+    <input
+        type="radio"
+        id="question12"
+        name="internal_sound"
+        value="4">
+    <label for="142">Varies</label>
+    <input
+        type="radio"
+        id="question12"
+        name="internal_sound"
+        value="5">
+    <label for="143">Unsure</label>
+   
+</label>
+
+<br><br>
+<label for="greatest_positive_impact">
+ <li>What single element of the building has had the greatest positive impact on you?</li>
+ <textarea id="greatest_positive_impact_text" name= "greatest_positive_impact_text" required placeholder="Please enter your answer for this question here"></textarea>
+ </label> 
+
+ <br><br>
+<label for="greatest_negative_impact">
+ <li>What single element of the building has had the greatest negative impact on you?</li>
+ <textarea id="greatest_negative_impact_text" name= "greatest_nagative_impact_text" required placeholder="Please enter your answer for this question here"></textarea>
+ </label> 
+
+
+ <label for="building_environment_overall_for_patients">
+  <li>How would you rate the building environment overall for patients?with 1 being very poor and 5 being exceptional?</li></li>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_patients"
+      value="1"
+      required>
+  <label for="139">1</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_patients"
+      value="2">
+  <label for="140">2</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_patients"
+      value="3">
+  <label for="141">3</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_patients"
+      value="4">
+  <label for="142">4</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_patients"
+      value="5">
+  <label for="143">5</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_patients"
+      value="N/A">
+  <label for="144">N/A</label>
+</label>
+
+<label for="building_environment_overall_for_carers">
+  <li>How would you rate the building environment overall for families/carers with 1 being very poor and 5 being exceptional?</li>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_carers"
+      value="1"
+      required>
+  <label for="139">1</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_carers"
+      value="2">
+  <label for="140">2</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_carers"
+      value="3">
+  <label for="141">3</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_carers"
+      value="4">
+  <label for="142">4</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_carers"
+      value="5">
+  <label for="143">5</label>
+  <input
+      type="radio"
+      id="question12"
+      name="building_environment_overall_for_carers"
+      value="N/A">
+  <label for="144">N/A</label>
+</label>
+      </div>
+      </ol>
+
+
+
+        <br>
+        <div class="form2">
+            <div class="banner1">
+                <h1>Thankyou</h1>
+            </div>
+
+            <div class="info3">
+            <label for="aob">If you have any additional comments, including any improvements that could be made to the design of the centre, please write below.<br></div>
+                <textarea id="aob" type="textarea" name="aob" required placeholder="Thankyou for your feedback"></textarea>
+                </label>
+
+            <br><br>
+          
+        
+        
+        </div>   
+
+
+
+
+
+            
+
+  
+         <input type="submit" value="Submit" class="box-button">
+        
+        <br><br>
+
+        </form>
+
+        <script>
+            function enable5(answer) {
+                console.log(answer.value);
+                if(answer.value == 5) {
+                    document.getElementById('Department1').classList.remove('d-none');
+                } else {
+                    document.getElementById('Department1').classList.add('d-none');
+                }
+            };
+                
+        </script>
+
+
+
+
+
+
+
+
+
+        <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+          
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+            </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownCheckbox = document.querySelector(".dropdown-checkbox");
+    const list = dropdownCheckbox.querySelector(".list-container");
+    const panel = dropdownCheckbox.querySelector(".panel-container");
+    const arrow = dropdownCheckbox.querySelector(".arrow-container");
+    const checkboxes = list.querySelectorAll("input[name=department]");
+    const currentSelection = document.querySelector("p.current-selection");
+
+    let currentSelectionSet = new Set();
+
+    function toggleDropdown(state = undefined) {
+      panel.classList.toggle("active", state);
+      list.classList.toggle("shown", state);
+      arrow.classList.toggle("opened", state);
+    }
+
+    function updateSelection(value) {
+      if (currentSelectionSet.has(value)) {
+        currentSelectionSet.delete(value);
+      } else {
+        currentSelectionSet.add(value);
+      }
+      selectedDepartments = [...currentSelectionSet];
+      document.getElementById('selectedDepartmentsInput').value = selectedDepartments.join(',');
+      // Send Custom Event "stylesChange"
+      currentSelection.dispatchEvent(new CustomEvent("stylesChange"));
+    }
+
+    panel.addEventListener("click", () => {
+      toggleDropdown();
+    });
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", (event) => {
+        const value = event.target.value;
+        updateSelection(value);
+        currentSelection.textContent = selectedDepartments.join(", ");
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!dropdownCheckbox.contains(target)) {
+        toggleDropdown(false);
+      }
+    });
+  });
+</script>
+
+
+
+
+    </body>
 </html>
